@@ -6,7 +6,7 @@
 
 //    public int strengthLevel { get; set; }
 
-        public void SayHello()
+//    public void SayHello()
         {
             Console.WriteLine($"Hello, I am a {Name} and my strength is {strengthLevel}");
         }
@@ -14,7 +14,7 @@
         private void SayBye()
         {
             Console.WriteLine("Please find it within your hear to pass me *tears*");
-        }
+//    }
 }
 
     internal class Program
