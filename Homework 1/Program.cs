@@ -1,10 +1,10 @@
 ﻿namespace Homework 1
 {
-    class Animal
-{
-        public string Name { get; set; }
+//    class Animal
+//{
+//    public string Name { get; set; }
 
-        public int strengthLevel { get; set; }
+//    public int strengthLevel { get; set; }
 
         public void SayHello()
         {
