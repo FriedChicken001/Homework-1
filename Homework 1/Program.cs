@@ -1,53 +1,106 @@
-﻿namespace Homework 1
+﻿namespace Homework1
 {
-//    class Animal
-//{
-//    public string Name { get; set; }
+    /**
+     * Make a List of Animals
+     * But before you can make a list of Animals
+     * You need an Animal
+     * So we have to design/make what an Animal looks like
+     */
 
-//    public int strengthLevel { get; set; }
+    class Animal
+    {
+        public string Name { get; set; }
+        public int strength { get; set; }
 
-//    public void SayHello()
+        public string SayHello()
         {
-            Console.WriteLine($"Hello, I am a {Name} and my strength is {strengthLevel}");
+
+            return $"Hello, I am a {Name} and my power level is {strength}";
         }
 
-        private void SayBye()
+        private string SayBye()
         {
-            Console.WriteLine("Please find it within your hear to pass me *tears*");
-//    }
-}
+            return "Plese Pass Me, I'm Struggling.";
+        }
 
+        public string ImplementingHomework()
+        {
+            string sayHelloReturnValue = SayHello();
+            string sayByeReturnValue = SayBye();
+
+            return sayHelloReturnValue + "" + sayByeReturnValue;
+        }
+
+    }
+    /**
+     * We have an Animal class now
+     * So we can now make animals
+     * 
+     * What do we need to do next? We now need a List of ANimals
+     * But before we can Populate the list we  must make naimals
+     */
     internal class Program
     {
-        static int[] arrayTest = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 }
-        static List<Animal> Animals { get; set; };
-        static List<int> strengthLevel { get; set; };
 
         static void Main(string[] args)
+        {
+            List<Animal> Animals = new List<Animal>();
+
+            Animal mouse = new Animal();
+            mouse.Name = "Mouse";
+            mouse.strength = 1;
+
+            Animal pikachu = new Animal();
+            pikachu.Name = "Pikachu";
+            pikachu.strength = 5;
+
+            Animal lethander = new Animal();
+            lethander.Name = "Lethander";
+            lethander.strength = 100;
+
+            Animals.Add(mouse);
+            Animals.Add(pikachu);
+            Animals.Add(lethander);
+
+
+            //Console.WriteLine($"Hello! I am a {mouse.Name} and I can do {mouse.strength} pushups");
+
+            /**
+             * Foreach has 3 parts
+             * 
+             * Data/Object Type
+             * GenericName
+             * TheDataToAccess/CollectionOfData
+             * 
+             * foreach (data/objectType genericAccessorName in CollectionOfData)
+             * {
+             *          RunThisCode();
+             * }
+             * 
+             */
+
+
+            
+            //Hint: do it here sorry I meant inside the loop
+            foreach (Animal pokemon in Animals)
             {
-                int x = 0;
-
-                String.add("Mouse");
-                String.add("Cat");
-                String.add("Dog");
-                String.add("Horse");
-                String.add("Human");
-                String.add("Tiger");
-                String.add("Dragon");
-                String.add("Hippo");
-                String.add("Moose");
-                String.add("MewTwo");
-
+                Console.WriteLine("Hello! I am a " + "" + pokemon.Name + "and I can do " + "" + pokemon.strength + ".");
+                
+                if (pokemon == lethander)
+                {
+                    Console.WriteLine("Oh no! We lost lethander!" + pokemon.ImplementingHomework());
+                    break;
+                }
             }
-        Animal mouse = new Animal();
-        mouse.Name = "Mouse";
-        mouse.strengthLevel = 1;
 
-        Console.Writeline(mouse.Name + "" + is + "" + mouse.strengthLevel);
+            
+
+         
+
+        }
+
+
+
 
     }
 }
-
-
-
-
